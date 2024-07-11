@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+<h1>Convert Celsius to Fahrenheit</h1>
+<form action="#" th:action="@{/convert}" th:object="${temperatureForm}" method="post">
+    <label for="celsius">Celsius:</label>
+    <input type="number" id="celsius" name="celsius" step="0.01" th:field="*{celsius}" required/>
+    <button type="submit">Convert</button>
+</form>
+</body>
+</html>
